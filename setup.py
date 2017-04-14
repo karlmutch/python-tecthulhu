@@ -15,7 +15,7 @@ if sys.version_info < (3, 4, 4):
 
 setup(
     name = 'tecthulhu',
-    version = '1.0',
+    version = '1.1',
 
     description = 'Python Tecthulhu',
     long_description = readme,
@@ -36,8 +36,9 @@ setup(
         'Topic :: Internet :: WWW/HTTP',
     ],
 
-    py_modules = ['tecthulhu'],
+    packages = ['tecthulhu'],
     package_dir = {'': 'src'},
+    package_data = {'tecthulhu': ['default-state.yaml']},
 
     install_requires = [
         'aiohttp>=2.0',
